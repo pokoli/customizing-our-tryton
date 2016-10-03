@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Customizing (Y)our Tryton</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h1>Customizing (Y)our Tryton</h1>
+                    <p>Available on: <a target="_blank"
+                        href="http://pokoli.github.io/customizing-our-tryton">
+                        http://pokoli.github.io/customizing-our-tryton</a></p>
+                </section>
+				<section>
+                    <h2> Who am I?</h2>
+                    <h3 class="fragment enfassis">
+                        Sergi Almacellas Abellana</h3>
+                    <ul>
+                        <li class="fragment">(Python &hearts;) Programmer</li>
+                        <li class="fragment">Open source enthusiast</li>
+                        <li class="fragment">Tryton commiter since Nov 2013
+                        </li>
+                    </ul>
+                </section>
+				<section>
+                    <h2>What are we going to do?</h2>
+                    <ol class="enfassis">
+                        <li class="fragment">(Samll) Introduction to Tryton</li>
+                        <li class="fragment">Install Tryton</li>
+                        <li class="fragment">Customize it</li>
+                        <li class="fragment">Save (Y)our customizations in a module</li>
+                    </ol>
+                </section>
+				<section>
+                    <h2>Software requirements</h2>
+                    <h3>Must</h3>
+                    <ol class="enfassis">
+                        <li>Python (of course)</li>
+                        <li>pip</li>
+                        <li>sqlite</li>
+                        <li>python-lxml installed (or development headers to compile it)</li>
+                        <li>Mercurial</li>
+                    </ol>
+                    <h3>Recomended</h3>
+                    <ol class="enfassis">
+                        <li>Use a virtualenv</li>
+                        <li>Do not use windows (if possible)</li>
+                        <li>Use python2.7 (otherwise you should run 2to3)</li>
+                    </ol>
+                </section>
+				<section>
+                    <h2>What is tryton?</h2>
+                    <ol class="enfassis">
+                        <li class="fragment">Application Platform</li>
+                        <li class="fragment">Usually for building erps (but not limited)</li>
+                    </ol>
+                    <h2 class="fragment">But also:</h2>
+                    <ol class="enfassis">
+                        <li class="fragment">Community</li>
+                        <li class="fragment">Foundation</li>
+                        <li class="fragment">No lock-in</li>
+                    </ol>
+                </section>
+				<section>
+                    <h2>Tryton Architecture</h2>
+                    <h3 class="fragment">3 Thiers: </h3>
+                    <ol class="enfassis">
+                        <li class="fragment">Application Server (trytond)</li>
+                        <li class="fragment">2 Clients: GTK (tryton) and Javascript(sao)</li>
+                        <li class="fragment">DBMS: PostgreSQL/SQLite/MySQL/(Oracle)</li>
+                    </ol>
+                </section>
+				<section>
+                    <h2 class="fragment">Designed for modularity</h2>
+                    <h3 class="fragment">Each module adds: </h3>
+                    <ol class="enfassis">
+                        <li class="fragment">Dependencies</li>
+                        <li class="fragment">Models</li>
+                        <li class="fragment">Views</li>
+                        <li class="fragment">Database configuration</li>
+                        <li class="fragment">Static Data</li>
+                    </ol>
+                </section>
+				<section>
+                    <h2>What is a tryton module?</h2>
+                    <p class="fragment">A Python Package</p>
+                </section>
+				<section>
+                    <h2>Get the base module</h2>
+                    <pre><code>
+hg clone https://bitbucket.org/pokoli/tryton_workshop
+                    </code></pre>
+                </section>
+				<section>
+                    <h2>Open the README and start reading...</h2>
+				<section>
+				<section>
+                    <h2>Get in touch:</h2>
+                    <p><a target="_blank"
+                        href="http://www.tryton.org/community.html">
+                        http://www.tryton.org/community.html
+                    </a></p>
+                    <h3>Or if you want to speak with me privatly</h2>
+                    <p><a target="_blank"
+                        href="mailto:sergi@koolpi.com">
+                        sergi (at) koolpi (dot) com
+                    </a></p>
+                </section>
+				<section>
+                    <h1>Thank you!</h1>
+                    <p>The presentation code is avaiable on </p>
+                    <p><a target="_blank"
+                        href="http://github.com/pokoli/customizing-our-tryton">
+                        http://github.com/pokoli/customizing-our-tryton
+                    </a></p>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

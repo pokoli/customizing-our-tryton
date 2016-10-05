@@ -1,5 +1,9 @@
-A presentation on how to contribute to [Tryton](http://www.tryton.org) using
+A presentation on how to customize (Y)our [Tryton](http://www.tryton.org) using
 [reveal.js](http://lab.hakim.se/reveal-js/).
+
+# Available on
+
+http://pokoli.github.io/customizing-our-tryton
 
 ## License
 
